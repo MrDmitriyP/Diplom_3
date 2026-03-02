@@ -10,7 +10,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import praktikum.api.UserData;
-import praktikum.api.UserSteps;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -23,9 +22,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Feature("Регистрация пользователя")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RegisterPagePositiveTest extends BaseTest {
-
-    private final UserSteps userSteps = new UserSteps();
-
     private static Stream<Arguments> userData() {
         return Stream.of(
                 Arguments.of("Дмитрий", UserData.EMAIL, "Qwerty"),
